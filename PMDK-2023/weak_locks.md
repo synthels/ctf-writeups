@@ -39,7 +39,7 @@ n = (p**2)*(q**2)
 totient = np.lcm(p*(p-1), q*(q-1))
 
 with open('pubkey.pem', 'r') as f:
-    key = RSA.import_key(f.read())
+  key = RSA.import_key(f.read())
 
 d = pow(e, -1, totient)
 
@@ -50,7 +50,7 @@ d = pow(e, -1, totient)
 c_factors_mod_n = []
 c_factors = [2, 101, 1811, 2833, 614321, 300662319069071, 46881635909203037]
 for p in c_factors:
-	c_factors_mod_n.append(pow(p, d, n))
+  c_factors_mod_n.append(pow(p, d, n))
 
 # Ένας παράγοντας του c έπερνε πολύ ώρα, οπότε τον έβαλα έτοιμο υπολογισμένο εδώ :P
 c_factors_mod_n.append(2517000348435916083423366097155216979785138526239703054239477691212462743055697560539055864413560542792989395505783)
