@@ -11,10 +11,10 @@ files = sorted(os.listdir(os.curdir + '/'))
 ciphertexts = []
 key = ""
 for name in files:
-	if name.endswith('.enc'):
-		with open(name, 'rb') as f:
-			key += f.read(1)
-			ciphertexts.append(f.read())
+  if name.endswith('.enc'):
+    with open(name, 'rb') as f:
+      key += f.read(1)
+      ciphertexts.append(f.read())
 
 flags = []
 for n in range(2**16):
